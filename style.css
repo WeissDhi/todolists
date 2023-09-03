@@ -1,0 +1,182 @@
+
+/* default settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+			
+
+
+body {
+    background-color: #232946;
+    color: white;
+    padding: 0 3%;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+
+.app {
+    width: 100%;
+    max-width: 768px;
+}
+
+/* APP HEADER STYLES */
+.app header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	margin: 0 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.app header h1 {
+    color: #d4939d;
+    font-size: 24px;
+    font-family:'Roboto', sans-serif;
+}
+
+.app header button {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.app header button i {
+	font-size: 24px;
+	color: green;
+	margin-left: 0.5rem;
+}
+.app header button:hover {
+	font-weight: bold;
+}
+
+/* item styles */
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: #434973;
+	box-shadow: 0 0 4px rgba(238, 228, 228, 0.1);
+	margin-bottom: 1.5rem;
+}
+
+.item:last-of-type {
+	margin-bottom: 0;
+}
+
+/* input styles */
+.item input[type="checkbox"] { /* pseudo selector*/
+	margin-right: 1rem;
+	width: 24px;
+    height: 16px;
+}
+.item input[type="text"] {
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	font-weight: 400;
+	color: #fff;
+	font-size: 20px;
+	flex: 1 1 0%;
+	margin-right: 1rem;
+}
+
+.item input[type="text"]:not(:disabled) { /*jika ga disabled (enabled)*/
+	border-bottom: 2px solid #fff;
+}
+
+/* if complete (opacity turun lalu muncul coretan)*/
+.item.complete {
+	opacity: 0.7;
+}
+
+.item.complete input[type="text"] {
+	text-decoration: line-through;
+}
+
+.item:hover,
+.item:focus-within {
+	outline: 1px solid #fff;
+}
+
+/* ACTIONS ICONS STYLES */
+.actions button {
+	color: #CCC;
+	margin-right: 1rem;
+	opacity: 0.8;
+	transform: 0.1s;
+}
+
+.actions button.remove-btn {
+	color: crimson;
+}
+
+.actions button:hover {
+	opacity: 1;
+}
+
+.actions button:last-of-type {
+	margin-right: 0;
+}
+
+
+/* phone styles */
+@media (max-width: 768px) {
+	/* Header styles for mobile */
+	main {
+		display: flex;
+		justify-content: center;
+		padding: 2rem 3%;
+	}
+	.app header {
+		margin: 0 1rem;
+		padding-bottom: 1rem;
+	}
+	.app header h1 {
+	  font-size: 20px;
+	  font-weight: bold;
+	}
+  
+	.app header button {
+	  font-size: 18px;
+	}
+  
+	/* Item styles for mobile */
+	.item {
+	  padding: 2vh 1rem;
+	}
+  
+	.item input[type="text"] {
+	  font-size: 16px;
+	  margin-right: 0;
+	}
+  
+	.actions {
+	  display: flex;
+	  justify-content: flex-end;
+	  width: auto;
+	}
+  
+	.actions button {
+	  margin: 0;
+	  margin-left: 0.5rem;
+	}
+  }
